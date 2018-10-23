@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Friend Finder</title>
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script> -->
+
+        <link href="style.css"
+              rel="stylesheet"
+              type="text/css">
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <h1>Survey</h1>
+
+        <hr>
+        
+        <h3>About You</h3>
+        <h4>Name (required)</h4>
+        <input class="form-control" id="name" type="input" required>
+
+        <h4>Photo (required)</h4>
+        <input class="form-control" id="photo" type="input" required>
+
+        <hr>
+
+        <h3>Question 1</h3>
+        <h4><strong>How much do you love dogs?</strong></h4>
+        <select class="chosen-select" id="q01">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 2</h3>
+        <h4><strong>How much do you love cats?</strong></h4>
+        <select class="chosen-select" id="q02">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 3</h3>
+        <h4><strong>How much do you love iguanas?</strong></h4>
+        <select class="chosen-select" id="q03">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 4</h3>
+        <h4><strong>How much do you love "The Fifth Element"?</strong></h4>
+        <select class="chosen-select" id="q04">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 5</h3>
+        <h4><strong>How much do you love "The Notebook"?</strong></h4>
+        <select class="chosen-select" id="q05">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 6</h3>
+        <h4><strong>How much do you love pizza?</strong></h4>
+        <select class="chosen-select" id="q06">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 7</h3>
+        <h4><strong>How much do you love brownies?</strong></h4>
+        <select class="chosen-select" id="q07">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 8</h3>
+        <h4><strong>How much do you love football (your choice which one)?</strong></h4>
+        <select class="chosen-select" id="q08">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 9</h3>
+        <h4><strong>How much do you love knitting?</strong></h4>
+        <select class="chosen-select" id="q09">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <h3>Question 10</h3>
+        <h4><strong>How much do you love this survey?</strong></h4>
+        <select class="chosen-select" id="q10">
+            <option value=""></option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Oh, so much!)</option>
+        </select>
+
+        <br>
+        <br>
+
+        <button class="submit">SUBMIT</button>
+
+        <div class="response">
+            <div class="response-data"></div>
+        </div>
+    </body>
+
+    <!-- link to jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="JavaScript" src="survey.js"></script>
+</html>
