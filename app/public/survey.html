@@ -20,22 +20,22 @@
     </head>
 
     <body>
-        <h1>Survey</h1>
+        <h1>Profile</h1>
 
         <hr>
         
         <h3>About You</h3>
-        <h4>Name (required)</h4>
-        <input class="form-control" id="name" type="input" required>
+        <h4 class="prompt-text" id="name-label">Name (required)</h4>
+        <input class="text-input" id="name" type="input" placeholder="Your name" required>
 
-        <h4>Photo (required)</h4>
-        <input class="form-control" id="photo" type="input" required>
+        <h4 class="prompt-text" id="photo-label">Photo (required)</h4>
+        <input class="text-input" id="photo" type="text" placeholder="URL to your photo" required>
 
         <hr>
 
-        <h3>Question 1</h3>
-        <h4><strong>How much do you love dogs?</strong></h4>
-        <select class="chosen-select" id="q01">
+        Question 1<br>
+        <h4 class="prompt-text" id="q0"><strong>How much do you love dogs?</strong></h4>
+        <select class="chosen-select" value="0">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -44,9 +44,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 2</h3>
-        <h4><strong>How much do you love cats?</strong></h4>
-        <select class="chosen-select" id="q02">
+        Question 2<br>
+        <h4 class="prompt-text select-text" value="1"><strong>How much do you love cats?</strong></h4>
+        <select class="chosen-select" value="1">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -55,9 +55,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 3</h3>
-        <h4><strong>How much do you love iguanas?</strong></h4>
-        <select class="chosen-select" id="q03">
+        Question 3<br>
+        <h4 class="prompt-text select-text" value="2"><strong>How much do you love iguanas?</strong></h4>
+        <select class="chosen-select" value="2">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -66,9 +66,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 4</h3>
-        <h4><strong>How much do you love "The Fifth Element"?</strong></h4>
-        <select class="chosen-select" id="q04">
+        Question 4<br>
+        <h4 class="prompt-text select-text" value="3"><strong>How much do you love "The Fifth Element"?</strong></h4>
+        <select class="chosen-select" value="3">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -77,9 +77,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 5</h3>
-        <h4><strong>How much do you love "The Notebook"?</strong></h4>
-        <select class="chosen-select" id="q05">
+        Question 5<br>
+        <h4 class="prompt-text select-text" value="4"><strong>How much do you love "The Notebook"?</strong></h4>
+        <select class="chosen-select" value="4">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -88,9 +88,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 6</h3>
-        <h4><strong>How much do you love pizza?</strong></h4>
-        <select class="chosen-select" id="q06">
+        Question 6<br>
+        <h4 class="prompt-text select-text" value="5"><strong>How much do you love pizza?</strong></h4>
+        <select class="chosen-select" value="5">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -99,9 +99,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 7</h3>
-        <h4><strong>How much do you love brownies?</strong></h4>
-        <select class="chosen-select" id="q07">
+        Question 7<br>
+        <h4 class="prompt-text select-text" value="6"><strong>How much do you love brownies?</strong></h4>
+        <select class="chosen-select" value="6">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -110,9 +110,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 8</h3>
-        <h4><strong>How much do you love football (your choice which one)?</strong></h4>
-        <select class="chosen-select" id="q08">
+        Question 8<br>
+        <h4 class="prompt-text select-text" value="7"><strong>How much do you love football (your choice which one)?</strong></h4>
+        <select class="chosen-select" value="7">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -121,9 +121,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 9</h3>
-        <h4><strong>How much do you love knitting?</strong></h4>
-        <select class="chosen-select" id="q09">
+        Question 9<br>
+        <h4 class="prompt-text select-text" value="8"><strong>How much do you love knitting?</strong></h4>
+        <select class="chosen-select" value="8">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -132,9 +132,9 @@
             <option value="5">5 (Oh, so much!)</option>
         </select>
 
-        <h3>Question 10</h3>
-        <h4><strong>How much do you love this survey?</strong></h4>
-        <select class="chosen-select" id="q10">
+        Question 10<br>
+        <h4 class="prompt-text select-text" value="9"><strong>How much do you love this survey?</strong></h4>
+        <select class="chosen-select" value="9">
             <option value=""></option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>

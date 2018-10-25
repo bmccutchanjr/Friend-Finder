@@ -1,57 +1,94 @@
 $(document).ready (function ()
 {   
-console.log ("survey.html");
+// console.log ("survey.html");
 
     $(".submit").click(function (event)
     {   // event listener for sunmit button
 
-console.log("on click")
+// console.log("on click")
         event.preventDefault();
 
-        var data = 
-        {   name:   "something",
-            photo:  "something else",
-            profile:
-            [   Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1),
-                Math.floor((Math.random() * 5) + 1)
-            ]
+        // First, set the color of all the labels and questions to black.  It's possible this is not the
+        // first time the user has clicked the submit button, and it it possible that everything is still
+        // not filled in.  To avoid confusion, reset the colors so we won't be inadvertantly signaling
+        // an error on a field that has been corrected.
+
+        $(".prompt-text").css("color", "black");
+
+        var valid = true;
+
+        var name = $("#name").val().trim();
+        if (!name)
+        {   valid = false;
+            $("#name-label").css("color", "red");
         }
-//         console.log ("data: ", data);
 
-        $.post ("http://localhost:3000/api/survey", data, function (response, status)
-        {   var rDiv = $(".response-data")
-            rDiv.empty();
+        var photo = $("#photo").val().trim();
+        if (!photo)
+        {   valid = false;
+            $("#photo-label").css("color", "red");
+        }
+        
+        var scores = [];
 
-            var title = $("<h2>");
-            title.text (response.name);
+        for (var i=0; i<10; i++)
+        {   // build an array of survey responses...at th same time, insure that all survey questions
+            // have been answered.
 
-            var image = $("<img>");
-            image
-            .attr ("src", "http://localhost:3000/image/" + response.photo)
-            .css ("hieght", 300)
-            .css ("width", 200);
+            var option = $(".chosen-select[value=" + i + "] option:selected").val();
+// console.log ($(".chosen-select[value=" + i + "]"));
+// console.log ($(".chosen-select[value=" + i + "] option:selected"));
+// console.log ("option: ", option);
+            if (!option)
+            {   valid = false;
+// console.log ("question #", i, " not answered");
+                $(".select-text[value=" + i + "]").css ("color", "red");
+            }
+            else
+            {   scores.push(parseInt(option));
+            }
+        }
 
-            var close = $("<button>");
-            close
-            .addClass("close")
-            .attr ("value", "close")
-            .text ("CLOSE");
+        if (valid)
+        {   var data =
+            {   "name":     $("#name").val().trim(),
+                "photo":    $("#photo").val().trim(),
+                "scores":   scores
+            }
 
-            rDiv
-            .append (title)
-            .append (image)
-            .append (close);
+console.log ("data: ", data);
 
-            $(".response").css("display", "flex");
-        })
+            $.post ("http://localhost:4000/api/friends/", data, function (response, status)
+            {
+console.log ("posted and responded");            
+
+                var rDiv = $(".response-data")
+                rDiv.empty();
+
+                var title = $("<h2>");
+                title.text (response.name);
+
+                var image = $("<img>");
+                image
+                .attr ("src", "image/" + response.photo)
+                .css ("hieght", 300)
+                .css ("width", 200);
+
+                var close = $("<button>");
+                close
+                .addClass("close")
+                .attr ("value", "close")
+                .text ("CLOSE");
+
+                rDiv
+                .append (title)
+                .append (image)
+                .append (close);
+
+                $(".response").css("display", "flex");
+            })
+
+        }
     });
 
     $(".response-data").on ("click", ".close", function(event)
@@ -61,25 +98,4 @@ console.log("on click")
 
         $(".response").css("display", "none");
     })
-
-    // // Chosen CSS
-    // var config = 
-    // {   ".chosen-select": {},
-    //     ".chosen-select-deselect": {
-    //         allow_single_deselect: true
-    //     },
-    //     ".chosen-select-no-single": {
-    //         disable_search_threshold: 10
-    //     },
-    //     ".chosen-select-no-results": {
-    //         no_results_text: "Oops, nothing found!"
-    //     },
-    //     ".chosen-select-width": {
-    //         width: "95%"
-    //     }
-    // };
-    // 
-    // for (var selector in config)
-    // {   $(selector).chosen(config[selector]);
-    // }
 })

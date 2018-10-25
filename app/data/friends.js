@@ -2,7 +2,7 @@ var Friends = function ()
 {   // Construct an array of 10 celebrity names unfortunate enough to be selected for use in my
     // app.
 
-    this.celebs = 
+    this.friends = 
     [   {   name:   "Carol Channing",
             photo:  "carol.jpg"
         },
@@ -36,53 +36,76 @@ var Friends = function ()
     ];
 
     this.findMatch = function(data)
-    {   // Compare the submitted survey results to ALL of the celebrity "profiles" to determine a best
+    {   // Compare the submitted survey results to ALL of the friend's scores to determine a best
         // match
 
-        var score = 0;
-
-        for (var i=0; i<10; i++)
-        {   score = score + parseInt(data[i]);
-        }
         var bestFriend = 0;                 // has to default to something - might as well be the first
-        var bestMatch = 1000;
+        var bestMatch = 1000;               // some random value much larger than actually possible
 
-        var cLength = this.celebs.length;
-        for (var i=0; i<cLength; i++)
-        {   
+        var fLength = this.friends.length;
+        for (var i=0; i<fLength; i++)
+        {   // for each element in friends[]...
 
-            var iScore = 0;
+            // accumulate the absolute value of the difference of scores submitted by our user
+            // and scores of each element in friends[].
+
+            var score = 0;
             for (var j=0; j<10; j++)
-            {   iScore += this.celebs[i].profile[j];
+            {   // for each element in the respective profiles...
+
+                score += Math.abs(parseInt(data[j]) - this.friends[i].scores[j]);
             }
 
-console.log ("i: ", i, " score: ", score, " celeb score: ", iScore, " delta: ", Math.abs(score - iScore));
-            if (Math.abs(iScore - score) < bestMatch)
-            {   bestMatch = Math.abs(iScore - score);
+            if (score < bestMatch)
+            {   // The accumulated difference in scores is less than the previous best match.
+                // This becomes the best match.  But keep looking, there could be a better match.
+
+                bestMatch = score;
                 bestFriend = i;
-            };
+            }
         };
 
         return bestFriend;
     };
 
-    this.getMatch = function (match)
-    {   return this.celebs[match];
-    }
+    this.add = function (data)
+    {   // Add the data submitted by the user to friends[]
 
-    var cLength = this.celebs.length;
-
-    for (var i=0; i<cLength; i++)
-    {   // Add an array of 10 randomly generated numbers to each of the celebrities.  This represents
-        // their profile.
-
-        var profile = [];
-
-        for (var j=0; j<10; j++)
-        {   profile.push (Math.floor(Math.random() * 5) + 1);
+        var scores = [];
+        for (var i=0; i<10; i++)
+        {   scores.push (parseInt(data.scores[i]));
         }
 
-        this.celebs[i].profile = profile;
+        var newFriend = 
+        {   "name": data.name,
+            "photo": data.photo,
+            "scores": scores
+        }
+
+        this.friends.push (newFriend);
+    }
+
+    this.getAll = function (match)
+    {   return this.friends;
+    }
+
+    this.getMatch = function (match)
+    {   return this.friends[match];
+    }
+
+    var cLength = this.friends.length;
+
+    for (var i=0; i<cLength; i++)
+    {   // Add an array of 10 randomly generated numbers to each of the friends.  This represents
+        // their survey responses.
+
+        var scores = [];
+
+        for (var j=0; j<10; j++)
+        {   scores.push (Math.floor(Math.random() * 5) + 1);
+        }
+
+        this.friends[i].scores = scores;
     }
 }
 
