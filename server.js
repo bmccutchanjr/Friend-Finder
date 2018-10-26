@@ -1,8 +1,3 @@
-// 01  Move routes to htmlRoutes.js
-// 02  Move routes to apiRoutes.js
-// 03 Commented out code that I'm not sure is necessary
-
-
 // NodeJS server
 
 // Dependencies and initialization

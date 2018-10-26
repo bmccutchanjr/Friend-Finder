@@ -24,13 +24,12 @@ router
 .get ("/image/:what", function (request, response)
 {   // generic handler for images in the response data
 
-    console.log(chalk.blue("serving: ", request.params.what))
+    console.log(chalk.blue("serving: image/", request.params.what))
     response.sendFile(path.join(__dirname, "../images/" + request.params.what));
 })
 .get ("/:what", function (request, response)
 {   // generic handler for all routes other than the home page
 
-console.log (chalk.yellow("/:what"));
     switch (request.params.what)
     {   case "favicon.ico":
         case "style.css":
