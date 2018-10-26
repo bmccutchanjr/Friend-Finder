@@ -1,8 +1,95 @@
+var ting = new Audio("ting.mp3");
+
+// function getQuestion()
+// {   // Returns an array of .question-div with attribute unanswered=true
+// 
+//     return questions = $(".question-div[unanswered='true'");
+// }
+
 $(document).ready (function ()
 {   
-// console.log ("survey.html");
 
-    $(".submit").click(function (event)
+// var questions = $(".question-div[unanswered='true'");
+// console.log("ready");
+// console.log("questions: ", questions);
+// console.log("which: ", $(questions[0]).attr("which"));
+//     var questions = getQuestions ();
+
+// console.log ("survey.html");
+    // The page has just loaded -- the user has not had an opportunity to interact with it yet.  Make
+    // the first survey question visible...
+    $(".question-div[which=0]").css("display", "block");
+
+    $(".chosen-select").on("change", function(event)
+    {   // The value of a survey question has been changed -- hopefully to a valid response.  Validate
+        // it and if valid, display the next question.
+
+        event.preventDefault ();
+
+// console.log("change");
+// console.log("event: ", event);
+// console.log("target: ", event.currentTarget);
+// console.log("which one: ", $(event.currentTarget).attr("select"));
+        var valid = true;
+        var question = $(event.currentTarget);
+        var which = question.attr("which");
+// console.log("which: ", which);
+
+//         var option = parseInt($(event + " option:selected").val());
+//         var option = parseInt($(".chosen-select[which=" + which + "] option:selected").val());
+// console.log("option: ", option);
+//         if (isNaN(option)) valid = false;
+    
+//         if ((option < 1) || (option > 5))
+//         {   // The survey responses are predefined in a <select>.  Possible <options> are a null
+//             // string or values "1", "2", "3", "4" or "5".  This should never happen, but should it
+//             // happen it needs to be handled.
+        
+//             valid = false;
+//         }
+
+//         if (!valid)
+//         {   $("question-text[which=" + which + "]").css ("color", "red");
+//         }
+//         else
+//         {   // The response was valid.  Hide this question and display the next.
+
+//             $(".question-div[which=" + which + "]").css("display", "none");
+            
+//             if (which < 9)
+//             {   which++;
+//                 $(".question-div[which=" + which + "]").css("display", "block");
+//             }
+//         }
+        // The survey responses are predefined in a <select> and this function is called by the on change
+        // event listener.  If the event fired, the associated <select> was changed and the value should
+        // always be valid.  No need to validate the response here, just display the next question.
+
+        if (which < 9)
+        {   // If this is not the last question in the survey, then hide this question and display the
+            // next.
+
+            $(".question-div[which=" + which + "]").css("display", "none");
+            
+            ting.load();
+            ting.play();
+        
+            which++;
+            $(".question-div[which=" + which + "]")
+            .css(
+                {   "display": "block",
+                    "opacity":  0.0
+                })
+            .animate({opacity: 1.0}, 2000);
+        }
+        else
+        {   // If it is the last question, display the submit button
+
+            $(".submit-button").css("display", "block");
+        }
+    });
+
+    $(".submit-button").click(function (event)
     {   // event listener for sunmit button
 
 // console.log("on click")
@@ -32,17 +119,17 @@ $(document).ready (function ()
         var scores = [];
 
         for (var i=0; i<10; i++)
-        {   // build an array of survey responses...at th same time, insure that all survey questions
+        {   // build an array of survey responses...at the same time, insure that all survey questions
             // have been answered.
 
-            var option = $(".chosen-select[value=" + i + "] option:selected").val();
+            var option = $(".chosen-select[which=" + i + "] option:selected").val();
 // console.log ($(".chosen-select[value=" + i + "]"));
 // console.log ($(".chosen-select[value=" + i + "] option:selected"));
 // console.log ("option: ", option);
             if (!option)
             {   valid = false;
 // console.log ("question #", i, " not answered");
-                $(".select-text[value=" + i + "]").css ("color", "red");
+                $(".question-text[which=" + i + "]").css ("color", "red");
             }
             else
             {   scores.push(parseInt(option));
