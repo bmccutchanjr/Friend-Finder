@@ -6,191 +6,188 @@
               content="width=device-width, initial-scale=1.0">
         <title>Friend Finder</title>
 
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script> -->
-
-        <link href="style.css"
-              rel="stylesheet"
-              type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
         <style>
         </style>
     </head>
 
     <body>
         <div class="wrapper">
-            <h1>Profile</h1>
+            <header class="survey-header">
+                Friend Finder<br>Profile
+            </header>
 
-            <hr>
-            
-            <h3>About You</h3>
-            <h4 class="prompt-text" id="name-label">Name (required)</h4>
-            <input class="text-input" id="name" type="input" placeholder="Your name" required>
+            <!-- <hr> -->
+            <main class="survey-main">
+                <h3>About You</h3>
+                <label for="name" class="prompt-text" id="name-label">Name (required)</label>
+                <input class="text-input" id="name" type="input" placeholder="Your name" required>
+                <br>
+                <br>
 
-            <h4 class="prompt-text" id="photo-label">Photo (required)</h4>
-            <input class="text-input" id="photo" type="text" placeholder="URL to your photo" required>
+                <label for="photo" class="prompt-text" id="photo-label">Photo (required)</label>
+                <input class="text-input" id="photo" type="text" placeholder="URL to your photo" required>
+                <br>
+                <br>
 
-            <hr>
-
-            <div class="question-div" which=0 unanswered="true">
-                <div class="question-header">Question 1 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="0"><strong>How much do you love dogs?</strong></h4>
-                    <select class="chosen-select" which="0">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=0 unanswered="true">
+                    <div class="question-header">Question 1 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="0"><strong>How much do you love dogs?</strong></h4>
+                        <select class="chosen-select" which="0">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=1 unanswered="true">
-                <div class="question-header">Question 2 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="1"><strong>How much do you love cats?</strong></h4>
-                    <select class="chosen-select" which="1">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=1 unanswered="true">
+                    <div class="question-header">Question 2 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="1"><strong>How much do you love cats?</strong></h4>
+                        <select class="chosen-select" which="1">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=2 unanswered="true">
-                <div class="question-header">Question 3 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="2"><strong>How much do you love iguanas?</strong></h4>
-                    <select class="chosen-select" which="2">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=2 unanswered="true">
+                    <div class="question-header">Question 3 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="2"><strong>How much do you love iguanas?</strong></h4>
+                        <select class="chosen-select" which="2">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=3 unanswered="true">
-                <div class="question-header">Question 4 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="3"><strong>How much do you love "The Fifth Element"?</strong></h4>
-                    <select class="chosen-select" which="3">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=3 unanswered="true">
+                    <div class="question-header">Question 4 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="3"><strong>How much do you love "The Fifth Element"?</strong></h4>
+                        <select class="chosen-select" which="3">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=4 unanswered="true">
-                <div class="question-header">Question 5 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="4"><strong>How much do you love "The Notebook"?</strong></h4>
-                    <select class="chosen-select" which="4">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=4 unanswered="true">
+                    <div class="question-header">Question 5 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="4"><strong>How much do you love "The Notebook"?</strong></h4>
+                        <select class="chosen-select" which="4">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=5 unanswered="true">
-                <div class="question-header">Question 6 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="5"><strong>How much do you love pizza?</strong></h4>
-                    <select class="chosen-select" which="5">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=5 unanswered="true">
+                    <div class="question-header">Question 6 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="5"><strong>How much do you love pizza?</strong></h4>
+                        <select class="chosen-select" which="5">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=6 unanswered="true">
-                <div class="question-header">Question 7 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="6"><strong>How much do you love brownies?</strong></h4>
-                    <select class="chosen-select" which="6">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=6 unanswered="true">
+                    <div class="question-header">Question 7 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="6"><strong>How much do you love brownies?</strong></h4>
+                        <select class="chosen-select" which="6">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=7 unanswered="true">
-                <div class="question-header">Question 8 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="7"><strong>How much do you love football (your choice which one)?</strong></h4>
-                    <select class="chosen-select" which="7">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=7 unanswered="true">
+                    <div class="question-header">Question 8 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="7"><strong>How much do you love football (your choice which one)?</strong></h4>
+                        <select class="chosen-select" which="7">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=8 unanswered="true">
-                <div class="question-header">Question 9 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="8"><strong>How much do you love knitting?</strong></h4>
-                    <select class="chosen-select" which="8">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=8 unanswered="true">
+                    <div class="question-header">Question 9 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="8"><strong>How much do you love knitting?</strong></h4>
+                        <select class="chosen-select" which="8">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question-div" which=9 unanswered="true">
-                <div class="question-header">Question 10 of 10</div>
-                <div class="question-area">
-                    <h4 class="question question-text" which="9"><strong>How much do you love this survey?</strong></h4>
-                    <select class="chosen-select" which="9">
-                        <option value=""></option>
-                        <option value="1">1 (Not so much)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Oh, so much!)</option>
-                    </select>
+                <div class="question-div" which=9 unanswered="true">
+                    <div class="question-header">Question 10 of 10</div>
+                    <div class="question-area">
+                        <h4 class="question question-text" which="9"><strong>How much do you love this survey?</strong></h4>
+                        <select class="chosen-select" which="9">
+                            <option value=""></option>
+                            <option value="1">1 (Not so much)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Oh, so much!)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-            <br>
-            <button class="submit-button">SUBMIT</button>
+                <br>
+                <br>
+                <button class="submit-button">SUBMIT</button>
 
-            <div class="response">
-                <div class="response-data"></div>
-            </div>
+                <div class="response">
+                    <div class="response-data"></div>
+                </div>
+            </main>
             <div class="push"></div>
         </div>
 

@@ -14,17 +14,29 @@
     </head>
 
     <body>
-        <h1>Friend Finder</h1>
+        <div class="wrapper">
+            <header class="home-header">
+                <h1 class="home-h1">Friend Finder</h1>
 
-        Take the <a href="survey.html">Survey</a>
-        <br>
-        <a href="/api/friends/">API Friends</a>
-    </body>
+                <div class="button-wrapper">
+                    <div class="button-div">
+                        <button class="survey-button">Take The Survey</button>
+                        <button class="api-button">API List</button>
+                    </div>
+                </div>
+            </header>
+        <div class="push"></div>
+    </div>
+
+    <footer>
+        <a href="/api/friends/">API List Friends</a>
+        <span class="copyright">All Rights Reserved</span>
+    </footer>
+</body>
 
     <!-- link to jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
-    <!-- <script language="JavaScript"
-            src="assets/javascript/app.js">
-    </script> -->
+    <script language="JavaScript" src="home.js">
+    </script>
 </html>
