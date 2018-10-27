@@ -142,6 +142,10 @@ a:visited
     color: var(--brd-color);
 }
 
+/*                                      */
+/* style specific to survey results     */
+/*                                      */
+
 .response
 {   display: none;
     height: 400px;
@@ -158,7 +162,30 @@ a:visited
     height: 400px;
     margin: 0px auto;
     padding: 25px;
+    overflow: hidden;
     width: 400px;
+}
+
+.response-button
+{   bottom: 0px;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.close-button
+{   background: #000088;
+    border: 1px solid #000088;
+    border-radius: 5px;
+    color: #eeeeff;
+    padding: 5px;
+    text-align: center;
+    width: 390px;
+}
+
+.close-button:hover
+{   background: var(--bg-color);
+    color: var(--brd-color);
 }
 
 /*                                      */
