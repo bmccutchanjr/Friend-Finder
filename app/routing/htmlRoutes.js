@@ -2,50 +2,59 @@
 // that make up the front-end of the app
 
 // First get the dependencies
-// Start with ExpressJS
+const chalk = require ("chalk");
 const express = require("express");
+const path = require("path");
+
 // Configure ExpressJS
 const app = express();
 const router = express.Router ();
 app.use ("/", router);
-// app.use(express.static ("../public"));
+app.use(express.static ("../public"));
 
-// Other dependencies
-const chalk = require ("chalk");
-const path = require("path");
-
+// And now to the meat and potatoes of the application
 router
-.get ("/", function (request, response)
-{   // The default route...return the home page
+.use (function (request, response, next)
+{   // Here for debugging...I couldn't figure out my routes without it because if the route isn't
+    // working, the console.log() doesn't execute.  I needed something that would always execute
+    // regardless of the routes...
+    //
+    // Interesting to note that this doesn't always execute either, but that may be because the
+    // browser is caching.
 
-    console.log (chalk.blue("requesting home page"));
-    response.sendFile(path.join(__dirname, "../public/home.html"));
+    console.log(chalk.yellow("requesting file: ", request.url));
+    next ();
 })
-.get ("/image/:what", function (request, response)
+.get ("/images/:what", function (request, response)
 {   // generic handler for images in the response data
 
     console.log(chalk.blue("serving: image/", request.params.what))
-    response.sendFile(path.join(__dirname, "../images/" + request.params.what));
+    response.sendFile(path.join(__dirname, "images/" + request.params.what));
+})
+.get ("/javascript/:what", function (request, response)
+{   // generic handler for images in the response data
+
+    console.log(chalk.blue("serving: javascript/", request.params.what))
+    response.sendFile(path.join(__dirname, "javascript/" + request.params.what));
+})
+.get ("/style/:what", function (request, response)
+{   // generic handler for images in the response data
+
+    console.log(chalk.blue("serving: style/", request.params.what))
+    response.sendFile(path.join(__dirname, "style/" + request.params.what));
 })
 .get ("/:what", function (request, response)
 {   // generic handler for all routes other than the home page
 
-    switch (request.params.what)
-    {   case "favicon.ico":
-        case "style.css":
-        case "survey.html":
-        case "survey.js":
-        {   console.log(chalk.blue("serving file: ", request.params.what));
+    console.log(chalk.blue("serving file: ", request.params.what));
         
-            response.sendFile(path.join(__dirname, "../public/" + request.params.what));
-            break;
-        }
-        default:
-        {   console.log(chalk.red("requested file: ", request.params.what));
-            response.send ("404 - File not found");
-            break;
-        }
-    }
+    response.sendFile(path.join(__dirname, request.params.what));
+})
+.get ("/", function (request, response)
+{   // The default route...return the home page
+    
+    console.log (chalk.blue("requesting home page"));
+    response.sendFile(path.join(__dirname, "home.html"));
 });
 
 module.exports = router;

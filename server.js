@@ -27,6 +27,6 @@ app.use ("/", router);
 // Start the server to begin listening
 app.listen(PORT, function()
 {
-    console.log("FreindFinder is listening on PORT " + PORT);
+    console.log("FriendFinder is listening on PORT " + PORT);
 
 });

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 *
 {   box-sizing: border-box;
 }
@@ -6,20 +9,27 @@
 {   --bg-color: #eeeeee;
     --brd-color: #222222;
     --color: black;
+    --font-family: "Roboto", "sans-serif";
     --font-size: 14px;
 }
 
 body
-{   font-family: sans-serif;
+{   background-image: url("../images/friends.jpg");
+    background-size: 100vw;
+    background-repeat: none;
+    font-family: sans-serif;
     font-size:  var(--font-size);
     margin: 0px;
     padding: 0px;
 }
 
 header
-{   background: var(--bg-color);
-    border-bottom: 3px solid var(--brd-color);
+{   /* background-color: var(--bg-color); */
+    /* background-image: url("friends.jpg"); */
+    /* background-size: auto 50vh; */
+    /* border-bottom: 3px solid var(--brd-color); */
     color: black;
+    font-family: "Lobster", "cursive";
     font-weight: bold;
     height: 50vh;
     padding-bottom: 10vh;
@@ -85,10 +95,15 @@ a:visited
 /*                                      */
 
 .survey-header
-{   font-size: 24px;
+{   font-size: 30px;
     height: auto;
-    justify-content: left;
     padding: 25px;
+    text-align: left;
+}
+
+header span
+{   font-family: var(--font-family);
+    font-size: 20px;
 }
 
 .survey-main
