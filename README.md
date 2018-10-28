@@ -8,7 +8,7 @@ Here's a [video]() of the application in action, or feel free to [try it]() for 
 
 The user interface is two simple web pages that are served up by the server, utilizing HTML, CSS, JavaScript an jQuery.  The [home page](https://github.com/bmccutchanjr/Friend-Finder/issues/3#issue-374710090) simply identifies the application and provides a button to access the [survey](https://github.com/bmccutchanjr/Friend-Finder/issues/4#issue-374710232).
 
-## The server
+## the server
 
 The server is a NodeJS application and uses ExpressJS.  It consists of four modules `server.js`, `htmlRoutes.js`, `apiRoutes.js` and `friends.js`.  apiRoutes is responsible for implementing the API endpoints and htmlRoutes implements the routes to server the web pages, images, CSS and JavaScript files used on the front end.
 
