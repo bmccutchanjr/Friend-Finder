@@ -6,7 +6,9 @@ Here's a [video]() of the application in action, or feel free to [try it]() for 
 
 ## the user intervace
 
-The user interface is two simple web pages that are served up by the server, utilizing HTML, CSS, JavaScript an jQuery.  The ![home page](/app/public/images/home.png) simply identifies the application and provides a button to access the ![survey](/app/public/images/survey.png).
+![home page](/app/public/images/home.png)
+
+The user interface is two simple web pages that are served up by the server, utilizing HTML, CSS, JavaScript an jQuery.  The home page simply identifies the application and provides a button to access the survey.
 
 ## the server
 
