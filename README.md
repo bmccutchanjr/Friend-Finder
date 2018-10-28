@@ -6,7 +6,7 @@ Here's a [video]() of the application in action, or feel free to [try it]() for 
 
 ## the user intervace
 
-The user interface is two simple web pages that are served up by the server, utilizing HTML, CSS, JavaScript an jQuery.  The [home page](https://github.com/bmccutchanjr/Friend-Finder/issues/3#issue-374710090) simply identifies the application and provides a button to access the [survey](https://github.com/bmccutchanjr/Friend-Finder/issues/4#issue-374710232).
+The user interface is two simple web pages that are served up by the server, utilizing HTML, CSS, JavaScript an jQuery.  The ![home page](/app/public/images/home.jpg) simply identifies the application and provides a button to access the ![survey](/app/public/images/survey.jpg).
 
 ## the server
 
