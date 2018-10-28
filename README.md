@@ -12,7 +12,7 @@ The user interface is two simple web pages that are served up by the server, uti
 
 ## the server
 
-The server is a NodeJS application and uses ExpressJS.  It consists of four modules `server.js`, `htmlRoutes.js`, `apiRoutes.js` and `friends.js`.  apiRoutes is responsible for implementing the API endpoints and htmlRoutes implements the routes to server the web pages, images, CSS and JavaScript files used on the front end.
+The server is a NodeJS application and uses ExpressJS.  It consists of four modules `server.js`, `htmlRoutes.js`, `apiRoutes.js` and `friends.js`.  apiRoutes is responsible for implementing the API endpoints and htmlRoutes implements the routes to serve the web pages, images, CSS and JavaScript files used on the front end.
 
 ### apiRoutes
 

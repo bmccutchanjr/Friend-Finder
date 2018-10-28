@@ -1,8 +1,11 @@
 // apiRoutes handles the routes specific to the Friends API.
 
 // First, get the dependencies
-// Start with ExpressJS
 const express = require("express");
+const chalk = require ("chalk");
+const path = require("path");
+const Friends = require("../data/friends.js");
+
 // ...Add configure ExpressJS
 const app = express();
 const router = express.Router ();
@@ -10,12 +13,7 @@ app.use ("/", router);
 app.use(express.json ());
 app.use(express.urlencoded({ extended: true }));
 
-// Other dependencies
-const chalk = require ("chalk");
-const path = require("path");
-
-// custom modules
-const Friends = require("../data/friends.js");
+// instatiate the data
 const friends = new Friends ();
 
 // Handle the routes

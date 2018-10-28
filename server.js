@@ -1,23 +1,17 @@
-// NodeJS server
+// A simple NodeJS server
 
-// Dependencies and initialization
-// Express
+// get the dependencies
 const express = require("express");
+const chalk = require("chalk");
+const apiRoutes = require ("./app/routing/apiRoutes.js");
+const htmlRoutes = require ("./app/routing/htmlRoutes.js");
+
 // Configure ExpressJS
 const app = express();
 app.use(express.static ("app/public"));
 app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 4000;
-
-// other modules
-const chalk = require("chalk");
-
-// Custome modules to handle the routes
-const apiRoutes = require ("./app/routing/apiRoutes.js");           // 02
-const htmlRoutes = require ("./app/routing/htmlRoutes.js");         // 01
-
-// ...And use those modules to handle routes
 
 const router = express.Router ();
 app.use('/api', apiRoutes);
