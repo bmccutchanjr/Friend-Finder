@@ -25,6 +25,12 @@ router
     console.log(chalk.yellow("requesting file: ", request.url));
     next ();
 })
+.get ("/audio/:what", function (request, response)
+{   // generic handler for images in the response data
+
+    console.log(chalk.blue("serving: image/", request.params.what))
+    response.sendFile(path.join(__dirname, "images/" + request.params.what));
+})
 .get ("/images/:what", function (request, response)
 {   // generic handler for images in the response data
 
@@ -54,7 +60,7 @@ router
 {   // The default route...return the home page
     
     console.log (chalk.blue("requesting home page"));
-    response.sendFile(path.join(__dirname, "home.html"));
+    response.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
 module.exports = router;

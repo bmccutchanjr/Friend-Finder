@@ -1,4 +1,4 @@
-var ting = new Audio("ting.mp3");
+var ting = new Audio("audio/ting.mp3");
 
 $(document).ready (function ()
 {   // The page has just loaded -- the user has not had an opportunity to interact with it yet.  Make
@@ -104,7 +104,7 @@ $(document).ready (function ()
 
                 var image = $("<img>");
                 image
-                .attr ("src", "image/" + response.photo)
+                .attr ("src", "images/" + response.photo)
                 .css ("hieght", 300)
                 .css ("width", 200);
 

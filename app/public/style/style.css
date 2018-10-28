@@ -8,6 +8,8 @@
 :root
 {   --bg-color: #eeeeee;
     --brd-color: #222222;
+    --button-bg: #000088;
+    --button-color: #eeeeff;
     --color: black;
     --font-family: "Roboto", "sans-serif";
     --font-size: 14px;
@@ -15,7 +17,8 @@
 
 body
 {   background-image: url("../images/friends.jpg");
-    background-size: 100vw;
+    /* background-position: left bottom; */
+    background-size: 100vw 100vh;
     background-repeat: none;
     font-family: sans-serif;
     font-size:  var(--font-size);
@@ -75,10 +78,10 @@ a:visited
 }
 
 .button-div button
-{   background: #000088;
-    border: 1px solid #000088;
+{   background: var(--button-bg);
+    border: 1px solid var(--button-bg);
     border-radius: 5px;
-    color: #eeeeff;
+    color: var(--button-color);
     font-size: 20px;
     padding: 5px;
     text-align: center;
@@ -86,8 +89,8 @@ a:visited
 }
 
 .button-div button:hover
-{   background: var(--bg-color);
-    color: var(--brd-color);
+{   background: var(--button-color);
+    color: var(--button-bg);
 }
 
 /*                                      */
@@ -115,15 +118,15 @@ header span
 }
 
 .text-input
-{   border: 1px solid var(--brd-color);
+{   border: 1px solid var(--button-bg);
     border-radius: 5px;
     font-size: var(--font-size);
     padding: 5px;
     width: 100%;
 }
 .question-div
-{   background: var(--bg-color);
-    border: 3px solid var(--brd-color);
+{   background: var(--button-color);
+    border: 3px solid var(--button-bg);
     border-radius: 5px;
     display: none;
     margin: 0px auto;
@@ -131,8 +134,8 @@ header span
 }
 
 .question-header
-{   background: var(--brd-color);
-    color: var(--bg-color);
+{   background: var(--button-bg);
+    color: var(--button-color);
     padding: 5px;
 }
 
@@ -141,10 +144,10 @@ header span
 }
 
 .submit-button
-{   background: #000088;
-    border: 1px solid #000088;
+{   background: var(--button-bg);
+    border: 1px solid var(--button-bg);
     border-radius: 3px;
-    color: #eeeeff;
+    color: var(--button-color);
     display: none;
     justify-content: center;
     margin: 0px auto;
@@ -153,8 +156,8 @@ header span
 }
 
 .submit-button:hover
-{   background: var(--bg-color);
-    color: var(--brd-color);
+{   background: var(--button-color);
+    color: var(--button-bg);
 }
 
 /*                                      */
