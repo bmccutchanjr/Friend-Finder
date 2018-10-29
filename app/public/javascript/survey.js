@@ -104,7 +104,8 @@ $(document).ready (function ()
 
                 var image = $("<img>");
                 image
-                .attr ("src", "images/" + response.photo)
+//                 .attr ("src", "images/" + response.photo)
+                .attr ("src", response.photo)
                 .css ("hieght", 300)
                 .css ("width", 200);
 

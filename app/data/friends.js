@@ -4,34 +4,34 @@ var Friends = function ()
 
     this.friends = 
     [   {   name:   "Carol Channing",
-            photo:  "carol.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/carol.jpg"
         },
         {   name:   "Grace Kelly",
-            photo:  "grace.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/grace.jpg"
         },
         {   name:   "Philip Seymour Hoffman",
-            photo:  "philip.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/philip.jpg"
         },
         {   name:   "Jane Mansfield",
-            photo:  "jane.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/jane.jpg"
         },
         {   name:   "Steve McQueen",
-            photo:  "steve.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/steve.jpg"
         },
         {   name:   "Marilyn Monroe",
-            photo:  "marilyn.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/marilyn.jpg"
         },
         {   name:   "Paul Newman",
-            photo:  "paul.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/paul.jpg"
         },
         {   name:   "Elvis Presley",
-            photo:  "elvis.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/elvis.jpg"
         },
         {   name:   "John Wayne",
-            photo:  "john.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/john.jpg"
         },
         {   name:   "Natalie Wood",
-            photo:  "natalie.jpg"
+            photo:  "http://bmccutchanjr-friend-finder.heroku.com/images/natalie.jpg"
         }
     ];
 
