@@ -94,7 +94,8 @@ $(document).ready (function ()
                 "scores":   scores
             }
 
-            $.post ("http://localhost:4000/api/friends/", data, function (response, status)
+//             $.post ("http://localhost:4000/api/friends/", data, function (response, status)
+            $.post ("api/friends/", data, function (response, status)
             {   // format the data received from the server and display on the screen
                 var rDiv = $(".response-data")
                 rDiv.empty();
