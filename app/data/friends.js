@@ -4,34 +4,34 @@ var Friends = function ()
 
     this.friends = 
     [   {   name:   "Carol Channing",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/carol.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/carol.jpg"
         },
         {   name:   "Grace Kelly",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/grace.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/grace.jpg"
         },
         {   name:   "Philip Seymour Hoffman",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/philip.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/philip.jpg"
         },
         {   name:   "Jane Mansfield",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/jane.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/jane.jpg"
         },
         {   name:   "Steve McQueen",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/steve.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/steve.jpg"
         },
         {   name:   "Marilyn Monroe",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/marilyn.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/marilyn.jpg"
         },
         {   name:   "Paul Newman",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/paul.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/paul.jpg"
         },
         {   name:   "Elvis Presley",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/elvis.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/elvis.jpg"
         },
         {   name:   "John Wayne",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/john.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/john.jpg"
         },
         {   name:   "Natalie Wood",
-            photo:  "https://bmccutchanjr-friend-finder.heroku.com/images/natalie.jpg"
+            photo:  "https://bmccutchanjr-friend-finder.herokuapp.com/images/natalie.jpg"
         }
     ];
 
