@@ -66,6 +66,7 @@ a:visited
 
 .button-wrapper
 {   bottom: 10vh;
+    min-width: 400px;
     position: absolute;
     width: 80vw;
 }
@@ -237,4 +238,27 @@ footer
 .copyright
 {   position: absolute;
     right: 15px;
+}
+
+/*                                      */
+/* media queries for responsive design  */
+/*                                      */
+
+@media screen and (max-width: 600px)
+{   header
+    {   padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    .button-wrapper
+    {   width: 100%;
+    }
+    
+    .survey-header
+    {   text-align: center;
+    }
+    
+    .survey-main
+    {   padding: 0px;
+    }
 }
