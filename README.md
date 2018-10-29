@@ -2,7 +2,7 @@
 
 Friend Finder is a full stack NodeJS application utilizing ExpressJS.  It's model is a simple "dating" site.  Visitors answer a short survey which are compared to data on the server.  The closest match is returned to the web browser.
 
-Here's a [video]() of the application in action, or feel free to [try it]() for yourself.
+Here's a [video](https://drive.google.com/file/d/1PEIqVOxlSr4BNR7-NNAMuJIOlVRAfIud/view) of the application in action, or feel free to [try it](https://bmccutchanjr-friend-finder.herokuapp.com/) for yourself.
 
 ## the user intervace
 
