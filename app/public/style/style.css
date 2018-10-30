@@ -256,7 +256,11 @@ footer
     {   width: 100%;
     }
     
-    .survey-header
+    .button-div
+    {   width: 100%;
+    }
+
+.survey-header
     {   text-align: center;
     }
     
