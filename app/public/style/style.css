@@ -17,7 +17,6 @@
 
 body
 {   background-image: url("../images/friends.jpg");
-    /* background-position: left bottom; */
     background-size: 100vw 100vh;
     background-repeat: none;
     font-family: sans-serif;
@@ -27,11 +26,7 @@ body
 }
 
 header
-{   /* background-color: var(--bg-color); */
-    /* background-image: url("friends.jpg"); */
-    /* background-size: auto 50vh; */
-    /* border-bottom: 3px solid var(--brd-color); */
-    color: black;
+{   color: black;
     font-family: "Lobster", "cursive";
     font-weight: bold;
     height: 50vh;
@@ -111,7 +106,7 @@ header span
 }
 
 .survey-main
-{   padding: 25px;
+{   padding: 0px 25px 25px 25px;
 }
 
 .prompt-text
@@ -182,7 +177,13 @@ header span
     margin: 0px auto;
     padding: 25px;
     overflow: hidden;
+    text-align: center;
     width: 400px;
+}
+
+.response-image
+{   height: auto;
+    width: 350px;
 }
 
 .response-button

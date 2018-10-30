@@ -1,3 +1,4 @@
+var blop = new Audio("audio/blop.mp3");
 var ting = new Audio("audio/ting.mp3");
 
 $(document).ready (function ()
@@ -19,16 +20,17 @@ $(document).ready (function ()
         // event listener.  If the event fired, the associated <select> was changed and the value should
         // always be valid.  No need to validate the response here, just display the next question.
 
+        ting.load();
+        ting.play();
+
         if (which < 9)
         {   // If this is not the last question in the survey, then hide this question and display the
             // next.
 
             $(".question-div[which=" + which + "]").css("display", "none");
             
-            ting.load();
-            ting.play();
-        
             which++;
+
             $(".question-div[which=" + which + "]")
             .css(
                 {   "display": "block",
@@ -54,19 +56,26 @@ $(document).ready (function ()
         // an error on a field that has been corrected.
 
         $(".prompt-text").css("color", "black");
+        $(".text-input").css("background", "white");
 
         var valid = true;
 
         var name = $("#name").val().trim();
         if (!name)
-        {   valid = false;
+        {   blop.load();
+            blop.play();
+            valid = false;
             $("#name-label").css("color", "red");
+            $("#name").css("background", "#ffcfcf");
         }
 
         var photo = $("#photo").val().trim();
         if (!photo)
-        {   valid = false;
+        {   blop.load();
+            blop.play();
+            valid = false;
             $("#photo-label").css("color", "red");
+            $("#photo").css("background", "#ffcfcf");
         }
         
         var scores = [];
@@ -96,6 +105,7 @@ $(document).ready (function ()
 
             $.post ("api/friends/", data, function (response, status)
             {   // format the data received from the server and display on the screen
+
                 var rDiv = $(".response-data")
                 rDiv.empty();
 
@@ -104,10 +114,8 @@ $(document).ready (function ()
 
                 var image = $("<img>");
                 image
-//                 .attr ("src", "images/" + response.photo)
-                .attr ("src", response.photo)
-                .css ("hieght", 300)
-                .css ("width", 200);
+                .addClass ("response-image")
+                .attr ("src", response.photo);
 
                 rDiv
                 .append (title)
