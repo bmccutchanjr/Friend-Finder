@@ -61,7 +61,7 @@ a:visited
 
 .button-wrapper
 {   bottom: 10vh;
-    min-width: 400px;
+    /* min-width: 400px; */
     position: absolute;
     width: 80vw;
 }
@@ -120,6 +120,7 @@ header span
     padding: 5px;
     width: 100%;
 }
+
 .question-div
 {   background: var(--button-color);
     border: 3px solid var(--button-bg);
@@ -262,4 +263,9 @@ footer
     .survey-main
     {   padding: 0px;
     }
-}
+
+    .question-div
+    {   width: 100%;
+    }
+    
+    }
